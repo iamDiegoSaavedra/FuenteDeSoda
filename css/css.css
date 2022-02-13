@@ -1,105 +1,16 @@
-.header {
-  padding: 60px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 30px;
+img.testimonios{
+  height: 150px;
+
 }
 
-h1.title{
-  text-align: center;
+section#testimonios{
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-
-/*menu*/
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  text-align: center;
-}
-
-li {  
-  border-right: 1px solid #bbb;/*crea un margen en cada li*/
-  display: inline-block; /* centralizacion horizontal */
-  margin: 0 5px;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover{
-  background-color: #8BBADC;
-}
-
-/*main*/
-.main{
-  display: block;
-  background-color: lightblue;
-  text-align: center;
-}
-
-/*footer*/
-.footer {
-  display: block;
-  text-align: left;
-  padding: 3px;
-  background-color: #1abc9c;
-  color: white;
-}
-
-/*table
-table {
-  font-family: arial, sans-serif;
-  margin: 0 auto;
-  border-collapse: collapse;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-*/
-
-* {
-  box-sizing: border-box;
-}
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 30px;
-  text-align: center;
-}
-
-.flex-item-left {
-  background-color: #f1f1f1;
-  padding: 10px;
-  flex: 50%;
-}
-
-.flex-item-right {
-  background-color: dodgerblue;
-  padding: 10px;
-  flex: 50%;
-}
-
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
-@media (max-width: 800px) {
-  .flex-item-right, .flex-item-left {
-    flex: 100%;
-  }
+.carousel-inner img {
+  object-fit: scale-down;
+  height: 50vh;
+  width: 100%;
 }
 
 div.clearfix{
