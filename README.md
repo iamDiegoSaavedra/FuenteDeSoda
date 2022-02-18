@@ -11,4 +11,9 @@ Una fuente de soda necesita construir una página web para poder mostrar la sigu
 
 4. Una sección donde estén los datos de nuestras 2 sucursales que incluya el mapa y cómo llegar, teléfonos y correos.
 
-5. Y un formulario de contacto para consultas y quejas.c
+5. Y un formulario de contacto para consultas y quejas.
+
+6. Es importante que el sitio se vea correctamente en celulares y tablets
+   Debe existir un área protegida del sitio para:
+    . ver y procesar los pedidos
+    . ver las consultas y quejas
