@@ -1,44 +1,106 @@
-document.getElementById("nombre").addEventListener("blur", (evento) => {
-    const input = evento.currentTarget;
-    const txtNombre = input.value;
+window.addEventListener("DOMContentLoaded", (eventoLoad) => {
+    document.querySelector("form").addEventListener("submit", (eventoSubmit) => {
+        eventoSubmit.preventDefault();
 
-    //const textOK = document.createTextNode("Nombre esta Ok");
-    //const textError = document.createTextNode("Nombre muy corto");
+        // Vanilla JS
+        const nombre    = document.getElementById("nombre").value;
+        const email     = document.getElementById("email").value;
+        const mensaje   = document.getElementById("txtMensajes").value;
+    
+        const mensajeError = [];
 
-    const feedbackNombre = document.getElementById("feedback-nombre")
+        // validaciones 
+        const nombreValido  = validarNombre(nombre);
+        const emailValido   = validarEmail(email);
+        const mensajeValido = validarMensaje(mensaje);
 
-    if(txtNombre.length < 3){
-        console.log("Nombre muy corto")
-        feedbackNombre.innerHTML = "Nombre muy corto";
-        input.classList.remove("is-valid");
-        input.classList.add("is-invalid");
-        feedbackNombre.className = "invalid-feedback";
-    }else{
-        console.log("Nombre está OK!")
-        feedbackNombre.innerHTML = "Nombre esta OK!";
-        input.classList.remove("is-invalid");
-        input.classList.Add("is-valid");
-        feedbackNombre.className = "valid-feedback";
-    }
+            
+        if( nombreValido.length > 0 ) {
+            mensajeError.push( nombreValido );
+        };
+
+    
+        if( emailValido.length > 0 ) {
+            mensajeError.push( emailValido );
+        };
+
+        if(mensajeValido > 0){
+            mensajeError.push(mensajeValido);
+        }
+
+        if( nombreValido.length == 0 && emailValido.length == 0 && mensajeValido.length == 0){
+            guardarDatosContacto(nombre, email, mensaje);
+        } else {
+            const mostrarMensajesErrores = document.getElementById("mensajeContacto")
+            mostrarMensajesErrores.innerHTML = mensajeError.join(", ");
+            mostrarMensajesErrores.classList.remove("d-none");
+        }
+        return false;
+    });
 });
 
+function guardarDatosContacto(nombre, email , mensaje) {
+    const urlSupabase   = 'https://jczhhpbmbdlszmosozet.supabase.co';
+    const apiKey        = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjemhocGJtYmRsc3ptb3NvemV0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDQ2NzE5ODAsImV4cCI6MTk2MDI0Nzk4MH0.Y8wy8phGSIXR6oIDCigZpISf6umr650jHKYAXfIgw5s';
+    const apiURL        = '/rest/v1/contacto'; // reemplazar con el nombre de su tabla 
 
+    // Javascript Object Notation (JSON)
+    const contacto = {
+        nombre, // debe llamarse igual que la columna de la BD y la variable o constante de su código.
+        email,
+        mensaje
+    }; 
 
-
-
-
-
-
-
-/*function manejarFormulario(evento){
-    evento.preventDefault();
-
-    const nombre = document.getElementById("nombre").value;
-
-    console.log("on-submit formulario contacto...");
-    
-    return false;
+    const url = urlSupabase + apiURL; // url = https://jczhhpbmbdlszmosozet.supabase.co/rest/v1/contacto
+    const resultadoFetch = fetch(url, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            "apikey": apiKey,
+            "authorization": "Bearer "+apiKey,
+            "Prefer": "return=representation" //Prefer: return=representation
+        },
+        body: JSON.stringify( contacto )
+    }).then( response => {
+        if( response.ok ) {
+            const r = response.json();
+            return r;
+        } else {
+            alert("Ocurrió un error al invocar la API de Supabase");
+        }
+    }).then( data => {
+        mostrarMensajeAlContacto( data );
+    }).catch( err => alert("Hubo un error en la red, intenté otra vez.")); // se invoca catch() cuando hay un error en la red 
+    ;
 }
 
-document.getElementById("formulario-contacto").addEventListener('submit', manejarFormulario);
-*/
+//validaciones
+function validarNombre(nombre) {
+	if(nombre.length < 3) {
+		return "Escriba Nombre Valido";
+	} else {
+		return "";
+	}
+};
+
+function validarEmail(email){
+    if(email == "" || email.length < 10) {
+		return "Escriba un Mail valido";
+	} else {
+		return "";
+	}
+};
+
+function validarMensaje(mensaje){
+    if(mensaje == "" || mensaje.length < 10) {
+		return "Escriba un mensaje valido";
+	} else {
+		return "";
+	}
+};
+
+//Mensaje al usuario
+function mostrarMensajeAlSuscriptor(data) {
+    // muestra mensaje de generación correcta boleta 
+    alert("Mensaje Enviado, su mensaje es el N°: "+data[0].id);
+};

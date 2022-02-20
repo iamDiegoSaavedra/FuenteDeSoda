@@ -14,6 +14,17 @@ Una fuente de soda necesita construir una página web para poder mostrar la sigu
 5. Y un formulario de contacto para consultas y quejas.
 
 6. Es importante que el sitio se vea correctamente en celulares y tablets
-   Debe existir un área protegida del sitio para:
-    . ver y procesar los pedidos
-    . ver las consultas y quejas
+   
+7. debe existir un área protegida.
+
+## usuario de prueba
+
+usuario: admin
+pass   : 1234
+
+## imagen Acceder login
+
+![Diágrama de páginas](https://iamDiegoSaavedra.github.io/FuenteDeSoda/docs/ingresarlogin.png)
+
+nota: solo ver suscriptores y ver suscriptores estan activos con supabase.
+

@@ -12,86 +12,73 @@
     <body>
         <div class="container">
 
-        
-          <header>
-
-          </header>
-
-          <div class="container">
-            <h1>Formulario de Contacto</h1>
-
-            <form action="" id="formulario-contacto" class="row g-3" onsubmit="m(e)"> 
-                <div class="col-md-6">
-                  <label for="validationServer01" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" >
-                  <div id="feedback-nombre" class="">
-                    
-                  </div>
-
+          <header></header>
+          <main>
+              <section class="formulario-contacto">
+                <div class="row">
+                    <div id="mensajeContacto" class="alert alert-danger d-none" role="alert" ></div>
                 </div>
-                <div class="col-md-6">
-                  <label for="validationServer02" class="form-label">Apellido</label>
-                  <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                </div>
-                <div class="col-md-6">
-                    <label for="validationServer01" class="form-label">Email</label>
-                    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
-                    <div class="valid-feedback">
-                      Looks good!
+
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="color-form">
+
+                            <form id="contacto" action="contacto.html">
+                                <h3>Contacto</h3>
+                                <p>Envianos un Mensaje</p>
+
+                                <div class="form-group">
+                                    <label for="Nombre">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="nombre">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="email" placeholder="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtMensajes">Mensaje</label>
+                                    <textarea class="form-control" id="txtMensajes" rows="3"></textarea>
+                                </div>
+                                <div>
+                                    <br>
+                                    <button type="submit" class="btn btn-success" value="Submit">Enviar</button>
+                                    <br> 
+                                </div>
+    
+                            </form>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="validationServer02" class="form-label">Teléfono</label>
-                    <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-                    <div class="valid-feedback">
-                      Looks good!
+                    <!--columna 2-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div id="info-contacto">
+                            <h3>Contactanos</h3>
+                            <p>
+                                Nuestro objetivo es crecer junto a la calidad de servicio. El mejor feedback lo obtenemos directamente de nuestros clientes
+                            </p>
+                            <ul>
+                                <li>
+                                    <p><i class="fa fa-envelope-o" aria-hidden="true"></i>contactocliente@fuentesodatodorico.cl</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-envelope-o" aria-hidden="true"></i>fuentesoda@fuentesodatodorico.cl</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-whatsapp" aria-hidden="true"></i>+56 9 6581 8250</p>
+                                </li>
+                            </ul>
+    
+                        </div>
                     </div>
-                  </div>
-                <div class="col-md-12">
-                  <label for="validationServer04" class="form-label">Sucursal</label>
-                  <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
-                    <option selected disabled value="">Escoge...</option>
-                    <option>Santiago</option>
-                    <option>Valparaíso</option>
-                  </select>
-                  <div id="validationServer04Feedback" class="invalid-feedback">
-                    Please select a valid state.
-                  </div>
-                </div>
-                <div class="col-md-3">
-                    <p>Motivo Contacto</p>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationFormCheck2">Felicitación</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationFormCheck2">Queja</label>
-                    </div>
-                      <div class="form-check mb-3">
-                        <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-                        <label class="form-check-label" for="validationFormCheck3">Consulta</label>
-                        <div class="invalid-feedback">More example invalid feedback text</div>
-                      </div>
-                </div>
-                <div class="col-12">
-                  
-                    
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary" type="submit">Submit form</button>
-                </div>
-              </form>
-        </div>
-           
+              </div>
+            </section>
+          
+          </div>
+          </main>
+          <footer></footer>
+          
 
-       <footer>
-
-       </footer>
-
+    
         </div>
     
 
@@ -99,6 +86,6 @@
         <script src="node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
         <script src="node_modules\jquery\dist\jquery.js"></script>
         <script src="js/contacto.js"></script>
-        <script src="js\script.js"></script>
+        <script src="js\include.js"></script>
     </body>
 </html>

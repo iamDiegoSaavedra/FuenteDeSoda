@@ -4,8 +4,8 @@ window.addEventListener("DOMContentLoaded", (loadEvent) => {
 
 function recuperarDatosSuscriptores() {
     const urlSupabase   = 'https://jczhhpbmbdlszmosozet.supabase.co';
-    const apiKey        = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjemhocGJtYmRsc3ptb3NvemV0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDQ2NzE5ODAsImV4cCI6MTk2MDI0Nzk4MH0.Y8wy8phGSIXR6oIDCigZpISf6umr650jHKYAXfIgw5s';
-    const apiURL        = '/rest/v1/suscriptores'; // reemplazar con el nombre de su tabla 
+    const apiKey        = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjemhocGJtYmRsc3ptb3NvemV0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDQ2NzE5ODAsImV4cCI6MTk2MDI0Nzk4MH0.Y8wy8phGSIXR6oIDCigZpISf6umr650jHKYAXfIgw5s'
+    const apiURL        = '/rest/v1/suscriptor'; // reemplazar con el nombre de su tabla 
 
     const url = urlSupabase + apiURL; // url = https://hqkjyiudhohhocdkuslx.supabase.co/rest/v1/suscriptores
     const resultadoFetch = fetch(url, {

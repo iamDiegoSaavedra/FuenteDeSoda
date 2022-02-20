@@ -3,21 +3,32 @@ window.addEventListener("DOMContentLoaded", (eventoLoad) => {
         eventoSubmit.preventDefault();
 
         // Vanilla JS
-        //const nombre    = document.getElementById("nombre").value;
-        //const email     = document.getElementById("email").value;
+        const nombre    = document.getElementById("nombre").value;
+        const email     = document.getElementById("email").value;
 
-        // jQuery 
-        const nombre    = $("#nombre").val();
-        const email     = $("#email").val(); 
+    
+        const mensajeError = [];
 
         // validaciones 
         const nombreValido  = validarNombre(nombre);
         const emailValido   = validarEmail(email);
 
-        if( nombreValido && emailValido){
+            
+        if( nombreValido.length > 0 ) {
+            mensajeError.push( nombreValido );
+        };
+
+    
+        if( emailValido.length > 0 ) {
+            mensajeError.push( emailValido );
+        };
+
+        if( nombreValido.length == 0 && emailValido.length == 0){
             guardarDatosSuscriptor(nombre, email);
         } else {
-            mostrarMensajeError();
+            const mostrarMensajesErrores = document.getElementById("mensajesErrores")
+            mostrarMensajesErrores.innerHTML = mensajeError.join(", ");
+            mostrarMensajesErrores.classList.remove("d-none");
         }
         return false;
     });
@@ -26,15 +37,15 @@ window.addEventListener("DOMContentLoaded", (eventoLoad) => {
 function guardarDatosSuscriptor(nombre, email) {
     const urlSupabase   = 'https://jczhhpbmbdlszmosozet.supabase.co';
     const apiKey        = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjemhocGJtYmRsc3ptb3NvemV0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDQ2NzE5ODAsImV4cCI6MTk2MDI0Nzk4MH0.Y8wy8phGSIXR6oIDCigZpISf6umr650jHKYAXfIgw5s';
-    const apiURL        = '/rest/v1/suscriptores'; // reemplazar con el nombre de su tabla 
+    const apiURL        = '/rest/v1/suscriptor'; // reemplazar con el nombre de su tabla 
 
     // Javascript Object Notation (JSON)
     const suscriptor = {
-        nombre,
+        nombre, // debe llamarse igual que la columna de la BD y la variable o constante de su código.
         email
-    }; // por ej. {nombre: 'Juanito Perez', email: 'juanito@123.cl'}
+    }; 
 
-    const url = urlSupabase + apiURL; // url = https://hqkjyiudhohhocdkuslx.supabase.co/rest/v1/suscriptores
+    const url = urlSupabase + apiURL; // url = https://jczhhpbmbdlszmosozet.supabase.co/rest/v1/suscriptor
     const resultadoFetch = fetch(url, {
         method: 'POST',
         headers: {
@@ -49,14 +60,33 @@ function guardarDatosSuscriptor(nombre, email) {
             const r = response.json();
             return r;
         } else {
-            console.error("Ocurrió un error al invocar la API de Supabase");
+            alert("Ocurrió un error al invocar la API de Supabase");
         }
     }).then( data => {
-        console.dir( data );
-    }).catch( err => console.dir(err) ) // se invoca catch() cuando hay un error en la red 
+        mostrarMensajeAlSuscriptor( data );
+    }).catch( err => alert("Hubo un error en la red, intenté otra vez.")); // se invoca catch() cuando hay un error en la red 
     ;
 }
 
-function mostrarMensajeError(){} // Uds. lo implementan 
-function validarNombre(nombre){ return true; } // Uds. lo implementan
-function validarEmail(email){ return true; } // Uds. lo implementan
+//validaciones
+function validarNombre(nombre) {
+	if(nombre.length < 3) {
+		return "Escriba Nombre Valido";
+	} else {
+		return "";
+	}
+};
+
+function validarEmail(email){
+    if(email == "" || email.length < 10) {
+		return "Escriba un Mail valido";
+	} else {
+		return "";
+	}
+};
+
+//Mensaje al usuario
+function mostrarMensajeAlSuscriptor(data) {
+    // muestra mensaje de generación correcta boleta 
+    alert("Suscripcion creada, su id es: "+data[0].id);
+};

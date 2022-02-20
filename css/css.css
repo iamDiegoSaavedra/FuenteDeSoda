@@ -1,7 +1,27 @@
 img.testimonio{
   height: 200px;
-
 }
+
+section#sandwich img{
+  max-height: 230px;
+}
+
+section#empanadas img{
+  max-height: 230px;
+}
+
+section#platos img{
+  max-height: 230px;
+}
+
+section#postres img{
+  max-height: 230px;
+}
+
+section#bebestibles img{
+  max-height: 230px;
+}
+
 section#testimonios{
   margin-top: 30px;
   margin-bottom: 30px;
@@ -10,6 +30,10 @@ section#testimonios{
   object-fit: scale-down;
   height: 80vh;
   width: 100%;
+}
+
+section#cartas-productos img{
+  max-height: 200px;
 }
 div.clearfix{
   clear:both;
