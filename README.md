@@ -24,7 +24,7 @@ pass   : 1234
 
 ## imagen Acceder login
 
-![Diágrama de páginas](https://iamDiegoSaavedra.github.io/FuenteDeSoda/docs/ingresarlogin.png)
+![login](https://github.com/iamDiegoSaavedra/FuenteDeSoda/docs/ingresarlogin.png?raw=true "Ingreso login")
 
 nota: solo ver suscriptores y ver suscriptores estan activos con supabase.
 
