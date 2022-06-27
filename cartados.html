@@ -24,8 +24,8 @@
 
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img class="card-img-top foto-menu" src="img\churrasco-menu.webp" alt="churrasco">
+                        <div class="card" id="mn-ch">
+                            <img class="card-img-top foto-menu" id="img-chu" src="img\churrasco-menu.webp" alt="churrasco">
                             <div class="card-body text-white bg-danger">
                               <h5 class="card-title">Churrasco</h5>
                               <p class="card-text">Bistec de lomo liso de vacuno en pan amasado, palta, tomates y mayonesa.</p>
@@ -34,14 +34,16 @@
                                 <li class="list-group-item">$ 6000</li>
                             </ul>
                             <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Agregar
+                              </button>
                               
                             </div>
                         </div>    
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="card">
-                            <img class="card-img-top foto-menu" src="img\lomo-menu.webp" alt="lomo">
+                            <img class="card-img-top foto-menu" id="img-lomo" src="img\lomo-menu.webp" alt="lomo">
                             <div class="card-body text-white bg-danger">
                               <h5 class="card-title">Lomo</h5>
                               <p class="card-text">Lomo de centro adobado, aliñado y horneado</p>
@@ -50,8 +52,9 @@
                                 <li class="list-group-item">$ 5000</li>
                             </ul>
                             <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Agregar
+                              </button>
                             </div>
                         </div>
                     </div>
@@ -66,13 +69,35 @@
                                 <li class="list-group-item">$ 5000</li>
                             </ul>
                             <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Agregar
+                              </button>
                             </div>
                         </div>    
                     </div>
                 </div>
             </section>
+
+          <!--Modal-->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Título del modal</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Guardar cambios</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end modal-->
+
           <!--Empanadas-->
             <section id="empanadas">
               <div class="card" >
@@ -93,8 +118,9 @@
                               <li class="list-group-item">$ 10000</li>
                           </ul>
                           <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Agregar
+                            </button>
                           </div>
                       </div>    
                   </div>
@@ -109,8 +135,9 @@
                               <li class="list-group-item">$ 5000</li>
                           </ul>
                           <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Agregar
+                            </button>
                           </div>
                       </div>
                   </div>
@@ -125,8 +152,9 @@
                               <li class="list-group-item">$ 4500</li>
                           </ul>
                           <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Agregar
+                            </button>
                           </div>
                       </div>    
                   </div>
@@ -152,8 +180,9 @@
                               <li class="list-group-item">$ 8000</li>
                           </ul>
                           <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Agregar
+                            </button>
                           </div>
                       </div>    
                   </div>
@@ -168,8 +197,9 @@
                               <li class="list-group-item">$ 10000</li>
                           </ul>
                           <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Agregar
+                            </button>
                           </div>
                       </div>
                   </div>
@@ -184,8 +214,9 @@
                               <li class="list-group-item">$ 12000</li>
                           </ul>
                           <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Agregar
+                            </button>
                           </div>
                       </div>    
                   </div>
@@ -212,8 +243,9 @@
                                 <li class="list-group-item">$ 4000</li>
                             </ul>
                             <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Agregar
+                              </button>
                             </div>
                         </div>    
                     </div>
@@ -244,8 +276,9 @@
                                 <li class="list-group-item">$ 1800</li>
                             </ul>
                             <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Agregar
+                              </button>
                             </div>
                         </div>    
                     </div>
@@ -272,7 +305,9 @@
                                 <li class="list-group-item">$1500</li>
                             </ul>
                             <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Agregar
+                              </button>
 
                             </div>
                         </div>    
@@ -288,8 +323,9 @@
                                 <li class="list-group-item">$1000</li>
                             </ul>
                             <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Agregar
+                              </button>
                             </div>
                         </div>
                     </div>
@@ -304,8 +340,9 @@
                                 <li class="list-group-item">$2500</li>
                             </ul>
                             <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Agregar
+                              </button>
                             </div>
                         </div>    
                     </div>
@@ -318,5 +355,6 @@
     <script src="node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
     <script src="node_modules\jquery\dist\jquery.min.js"></script>        
     <script src="js\include.js"></script>
+    <script src="js\modal.js"></script>
 </body>
 </html>

@@ -35,6 +35,12 @@ section#testimonios{
 section#cartas-productos img{
   max-height: 200px;
 }
+
+div.image {
+  position: relative;
+  width: 100%; /* for IE 6 */
+}
+
 div.clearfix{
   clear:both;
 }
