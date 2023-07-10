@@ -1,8 +1,8 @@
 .page-ban {
     width: 100%;
-    padding:60px 0;
+    padding:40px 0;
     text-align: center;
-    background-image: url(https://th.bing.com/th/id/R.2e3866bc07f3eeeb488888733c21bd56?rik=w8oTaA0dp4pJYQ&pid=ImgRaw&r=0);
+    background-image: url(img/banner-menu.jpg);
     /* Fijar la imagen de fondo este vertical y
       horizontalmente y centrado */
     background-position: center center;
@@ -11,86 +11,14 @@
     /* La imagen ocupa el 100% y se reescala */
     background-size: cover;
     color: white;
-}
-
-.page-emp {
-    width: 100%;
-    padding:60px 0;
-    text-align: center;
-    background-image: url(https://mlpgeefzpyqp.i.optimole.com/wo8n-H0.wwaY~ec4c/w:auto/h:auto/q:auto/https://prem.cl/content/uploads/2020/08/banner-empanadas.jpg);
-    /* Fijar la imagen de fondo este vertical y
-      horizontalmente y centrado */
-    background-position: center center;
-    /* Esta imagen no debe de repetirse */
-    background-repeat: no-repeat;
-    /* La imagen ocupa el 100% y se reescala */
-    background-size: cover;
-    color: white;
-}
- 
-.page-pla {
-    width: 100%;
-    padding:60px 0;
-    text-align: center;
-    background-image: url(https://th.bing.com/th/id/R.4e7e4e9b60b32e21a1af2657592ff6f4?rik=F8RhGYLg5zfqhQ&pid=ImgRaw&r=0);
-    /* Fijar la imagen de fondo este vertical y
-      horizontalmente y centrado */
-    background-position: center center;
-    /* Esta imagen no debe de repetirse */
-    background-repeat: no-repeat;
-    /* La imagen ocupa el 100% y se reescala */
-    background-size: cover;
-    color: white;
-}
-
-.page-beb {
-    width: 100%;
-    padding:60px 0;
-    text-align: center;
-    background-image: url(https://img.freepik.com/free-photo/colorful-soda-drinks-macro-shot_53876-18225.jpg?t=st=1656364550~exp=1656365150~hmac=17c3d697f76be6310580c6cff278c2faa514a6039bf697b89f486ceff37dd756&w=740);
-    /* Fijar la imagen de fondo este vertical y
-      horizontalmente y centrado */
-    background-position: center center;
-    /* Esta imagen no debe de repetirse */
-    background-repeat: no-repeat;
-    /* La imagen ocupa el 100% y se reescala */
-    background-size: cover;
-    color: white;
-}
-
-.page-pos {
-    width: 100%;
-    padding:60px 0;
-    text-align: center;
-    background-image: url(https://th.bing.com/th/id/R.d057959d5169be4b116ceeea90962934?rik=CMJQGOtEMFyhuw&riu=http%3a%2f%2fblog.kiwilimon.com%2fwp-content%2fuploads%2f2012%2f01%2fpostre-peruano-limeno.jpg&ehk=1f8Lkwf6wIKm0AfzeEXleiXcz7JKkrcFJX7TtEtHcSs%3d&risl=&pid=ImgRaw&r=0);
-    /* Fijar la imagen de fondo este vertical y
-      horizontalmente y centrado */
-    background-position: center center;
-    /* Esta imagen no debe de repetirse */
-    background-repeat: no-repeat;
-    /* La imagen ocupa el 100% y se reescala */
-    background-size: cover;
-    color: white;
-}
-
-.page-pos h1 {
-    font-weight: bold; 
-    text-shadow: 0 0 2px black
-}
-
-.page-beb h1 {
-    font-weight: bold; 
-    text-shadow: 0 0 4px black
 }
 
 .page-ban h1{
     font-weight: bold; 
 }
 
-.page-emp h1{
-    font-weight: bold; 
-}
-
-.page-pla h1{
-    font-weight: bold; 
+.card-img-top{
+    max-height: 230px;
+    border-radius: 0;
+    border: none;
 }

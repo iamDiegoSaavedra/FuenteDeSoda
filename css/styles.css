@@ -3,7 +3,7 @@ INDEX
 /******************/
 /* carousel img */
 .carousel-inner img {
-  height: 80vh;
+  height: 60vh;
   width: 100%;
 }
 
@@ -12,6 +12,24 @@ INDEX
   margin: 1em;
   padding: 1em;
   text-align: center;
+}
+
+/* section testimonios*/ 
+section#testimonios{
+  width: 100%;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.witness-border{
+  border-style: solid;
+  border-width: 1px;
+  border-color:#ffffff;
+}
+
+img.witness{
+  margin-top: 1px;
+  height: 200px;
 }
 
 .spreader-bar{
@@ -24,15 +42,27 @@ INDEX
 }
 
 
-section#testimonios{
-  width: 100%;
-  padding: 0;
-  margin-top: 30px;
+/* section productos*/
+.card-group{
+  display: flex;
 }
-/*section testimonio */
-img.testimonio{
-  margin-top: 1px;
-  height: 200px;
+
+.card {
+  border-radius: 0;
+  border-color: red;
+  margin: 1px;
+}
+
+.card-img-top{
+  max-height: 230px;
+  border-radius: 0;
+  border: none;
+}
+
+.carta-index{
+  background-color: red;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 section#sandwich img{
@@ -57,8 +87,18 @@ section#bebestibles img{
 
 
 
-section#cartas-productos img{
-  max-height: 200px;
+
+/* seccion Ubicacion */
+#map { height: 480px;}
+
+/* formulario contacto */
+.cont-text{
+  margin-left: 1em;
+}
+
+.form-group{
+  margin-left: 1em;
+  margin-bottom: 1em;
 }
 
 div.image {
@@ -70,3 +110,10 @@ div.clearfix{
   clear:both;
 }
 
+
+.btn-iramenu{
+  display: block;
+  height: 40px;
+  width: 150px;
+  margin: 5px auto;
+}
