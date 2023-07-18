@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+
+
 /*******************
 INDEX
 /******************/
@@ -12,24 +16,6 @@ INDEX
   margin: 1em;
   padding: 1em;
   text-align: center;
-}
-
-/* section testimonios*/ 
-section#testimonios{
-  width: 100%;
-  padding: 0;
-  margin-top: 30px;
-}
-
-.witness-border{
-  border-style: solid;
-  border-width: 1px;
-  border-color:#ffffff;
-}
-
-img.witness{
-  margin-top: 1px;
-  height: 200px;
 }
 
 .spreader-bar{
@@ -59,12 +45,95 @@ img.witness{
   border: none;
 }
 
+.card-body{
+  background-color: #ffffff;
+  color:#000000;
+}
+
 .carta-index{
   background-color: red;
   padding-top: 1px;
   padding-bottom: 1px;
 }
 
+.btn-ver-carta{
+  display: block;
+  height: 40px;
+  width: 150px;
+  margin: 5px auto;
+}
+
+/* section testimonios*/ 
+section#testimonios{
+  width: 100%;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.witness-border{
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.witness-card{
+  padding-bottom: 1em;
+}
+
+
+img.witness{
+  margin-top: 1px;
+  height: 200px;
+}
+
+/* Ubicación y contacto */
+.bg-contact{
+  background-color: #ffcc99;
+}
+
+.contactForm{
+  margin-right: 1rem;
+}
+
+
+/* seccion Ubicacion */
+#map { height: 480px;}
+
+
+
+/* formulario contacto */
+.cont-text{
+  margin-left: 1em;
+}
+
+.cont-img{
+  display: flex;
+  justify-content: center;
+}
+
+.form-group{
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.img-contacto{
+  height: 30vh;
+  width: 30vh;
+  margin: auto;
+}
+
+@media screen and (max-width: 610px){
+  .cont-text{
+    display: none;
+  }
+
+  .img-contacto{
+    display: none;
+  }
+}
+
+/*******************************
+Página Menú
+*******************************/
 section#sandwich img{
   max-height: 230px;
 }
@@ -86,34 +155,79 @@ section#bebestibles img{
 }
 
 
-
-
-/* seccion Ubicacion */
-#map { height: 480px;}
-
-/* formulario contacto */
-.cont-text{
-  margin-left: 1em;
+/***************************
+*** Historia
+****************************/
+/* banner página historia*/
+.ban-history{
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(img/establecimiento-comida-rapida.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding-top: 60px;
 }
 
-.form-group{
-  margin-left: 1em;
-  margin-bottom: 1em;
+.bg-teamworker{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),  url(img/dine-out.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-div.image {
-  position: relative;
-  width: 100%; /* for IE 6 */
+.ban-teamworker{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  color:#ffffff;
 }
 
-div.clearfix{
-  clear:both;
+.centrar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.centrar-hijo{
+  margin: auto;
+  text-align: center;
+}
 
-.btn-iramenu{
-  display: block;
-  height: 40px;
-  width: 150px;
-  margin: 5px auto;
+.videos{
+  width: 400px;
+  height: 320px;
+}
+
+@media screen and (max-width: 600px) {
+  .videos {
+    width: 320px;
+    height: 240px;
+  }
+}
+
+.img-fam{
+  width: 100%;
+  height: 480px;
+  background-image: url(img/fam.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-historia{
+  padding-top: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text-historia h3{
+  font-size: 36px;
+  font-family: 'Crimson Text', serif;
+  color:#ff1a1a;
 }

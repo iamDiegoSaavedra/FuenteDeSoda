@@ -4,8 +4,8 @@
 	  <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="node_modules\font-awesome\css\font-awesome.min.css"/>
     <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
     <link rel="stylesheet" href="css\styles.css"> 
@@ -15,116 +15,66 @@
         
       <!-- nav -->
       <header></header>
-        
-       <div id="carrusel" class="carousel slide">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/carrousel-1.jpg" class="img-carrousel" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/carrousel-2.jpg" class="img-carrousel" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/carrousel-3.jpg" class="img-carrousel" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
+      
+      <!-- carousel-->
+      <div id="carouselIndex" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="img/carrousel-1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Bienvenido a Fuente de Soda Todo Rico</h5>
+              <p>entregamos calidad y tradición</p>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="img/carrousel-2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Las Mejores preparaciones</h5>
+              <p>Nuestras preparaciones son hechas con los mejores productos</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="img/carrousel-3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Calidad de Servicio</h5>
+              <p>la calidad en nuestros servicios y productos es nuestra prioridad</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-
-
+      
+      <!-- contenido  -->
       <div class="container">
 
+          <!-- Titulo de Bienvennida -->
           <div class="presentation-title">
              <h1>Bienvenido a Fuente de Soda Todo Rico!</h1> 
           </div>
-          
-          <section id="testimonios">
-            <div class="row col-sm-12 col-lg-12 spreader-bar"> 
-              <h3>Testimonios de Nuestro Servicio</h3>
-            </div>
-            <div class="row">
-              <div class="col-sm-12 col-lg-4 pb-1 text-center bg-warning witness-border">
-                <img class="witness" src="img\testimonio-1.jpg" alt="Testimonio Joaquín Roa" />
-                <h3>Joaquín Roa</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <span class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-              </div>
-              <div class="col-sm-12 col-lg-4 pb-1 text-center bg-danger witness-border">
-                <img class="witness" src="img\testimonio-2.jpg" alt="Testimonio María Díaz"  />
-                <h3>María Díaz</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <span class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </span>
-              </div>
-              <div class="col-sm-12 col-lg-4 pb-1 text-center bg-warning witness-border">
-                <img class="witness" src="img\testimonio-3.jpg" alt="Testimonio José Soto" />
-                <h3>José Soto</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Phasellus quis tempor eros.
-                </p>
-                <span class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </span>
-              </div>
-            </div>
-          </section>
 
-          <hr>
-          
+          <!-- Productos -->
           <div class="cartas-productos">
 
-            <div class="row col-sm-12 col-lg-12 spreader-bar"> 
+            <div class="col-sm-12 col-lg-12 spreader-bar"> 
               <h3>Nuestros Productos</h3>
             </div>
 
-            <div class="row carta-index"> 
+            <div class="row g-0 carta-index"> 
 
               <div class="card-group">
-                <!-- Sandwiches -->
+              <!-- Sandwiches -->
               <div class="col-sm-12 col-lg-4 text-center">
                 <div class="card flex-fill text-center">
                   <img class="card-img-top" src="img\chacarero-menu.webp" alt="chacarero" />
@@ -133,7 +83,7 @@
                     <p class="card-text">
                       Clásicos churrascos,lomitos, chacareros, fricandelas, gordas. Con todo el sabor tradicional.
                     </p>
-                    <a href="cartados.html" class="btn btn-primary">Ir al Servicio</a>
+                    
                   </div>
                 </div>
               </div>
@@ -147,7 +97,6 @@
                     <p class="card-text">
                       Crujientes y sabrosas. Variedades: Pino, queso, ostión queso, napolitana, camarón queso, pollo pesto y espinaca choclo.
                     </p>
-                    <a href="cartados.html" class="btn btn-primary">Ir al Servicio</a>
                   </div>
                 </div>
               </div>
@@ -161,54 +110,163 @@
                     <p class="card-text">
                       Carne de Cerdo, longaniza artesanal, salteado de cebollas, colchón de papas fritas y huevo frito.
                     </p>
-                    <a href="cartados.html" class="btn btn-primary">Ver Menú</a>
+                    
                   </div>
                 </div>
               </div>
 
-              </div>
+              </div><!--- end card group-->
               
+
+              <div>
+                <br>
+                <a href="cartados.html" class="btn btn-primary btn-ver-carta">Ver Carta</a>
+                <br>
+              </div>
             </div>
 
-            <div class="row">
-              <a href="cartados.html" class="btn btn-primary btn-iramenu">Ver Más</a>
-            </div>
+            
             
           </div>
+
+          <!-- seccion testimonios -->
+          <section id="testimonios">
+            <div class="col-sm-12 col-lg-12 spreader-bar"> 
+              <h3>Testimonios de Nuestro Servicio</h3>
+            </div>
+
+            <div class="row g-0 bg-danger">
+              <!-- testimonio 1 -->
+              <div class="col-sm-12 col-lg-4 text-center witness-border">
+                <div class="witness-card bg-warning ">
+                  <img class="witness" src="img\testimonio-1.jpg" alt="Testimonio Joaquín Roa" />
+                  <h3>Joaquín Roa</h3>
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <span class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </span>
+                </div>
+              </div>
+              <!-- testimonio 2 -->
+              <div class="col-sm-12 col-lg-4  text-center witness-border">
+                <div class="witness-card"  style="background-color: #ff7f50;">
+                  <img class="witness" src="img\testimonio-2.jpg" alt="Testimonio María Díaz"  />
+                  <h3>María Díaz</h3>
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <span class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                  </span>
+                </div>
+              </div>
+              <!-- testimonio 3 -->
+              <div class="col-sm-12 col-lg-4 text-center witness-border">
+                <div class="witness-card bg-warning">
+                  <img class="witness" src="img\testimonio-3.jpg" alt="Testimonio José Soto" />
+                  <h3>José Soto</h3>
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Phasellus quis tempor eros.
+                  </p>
+                  <span class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+          </section>
           
           <br>
 
+          <!-- Ubicación y contacto -->
           <div>
-            <div class="row col-sm-12 col-lg-12 spreader-bar"> 
-              <h3>Ubicación y contacto</h3>
+            <div class="col-sm-12 col-lg-12 spreader-bar"> 
+              <h3>Ubicación</h3>
             </div>
-            <div class="row g-0">
+            <div class="row g-0 m-1">
               <!-- Mapa Ubicación-->
               <div class="col-md-6 col-sm-12" id="map">
               </div>
 
               <!--Formulario Contacto -->
+              <div class="col-md-6 col-sm-12 text-historia">
+                <h3>Dirección</h3>
+                <p>Calle 123
+                  <br>
+                  Calle 124
+                </p>
+                <h3>Teléfonos</h3>
+                <p>
+                  +56123456789 
+                  <br>
+                  +56123456789
+                </p>
+                <h3>Horario Atención</h3>
+                <p>
+                  - Lunes a Sábado 12:00 a 23:15 hrs.
+                  <br>
+                  - Domingo 12:00 a 16:45 hrs.
+                </p>
+
+              </div>
+            </div>
+          </div>          
+          <br>
+
+          <div>
+            <div class="col-sm-12 col-lg-12 spreader-bar"> 
+              <h3>Contacto</h3>
+            </div>
+            <div class="row g-0 m-1">
               <div class="col-md-6 col-sm-12">
                 <div class="cont-text">
                   <h3>Contactanos</h3>
+                  <p>Llena el formulario y nos pondremos en contacto</p>
                   <p>Nuestro objetivo es crecer junto a la calidad de servicio. El mejor feedback lo obtenemos directamente de nuestros clientes</p>
+                  <div class="cont-img">
+                    <img src="img/icono-comida.png" class="img-contacto" alt="" >
+                  </div>
                 </div>
+              </div>
+
+              <div class="col-md-6 col-sm-12 bg-contact">            
+                <!--Formulario Contacto -->
                 <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                  
                   <div class="row">
                       <div class="col-md-12">
                           <div class="form-group">
+                              <label>Nombre</label>
                               <input type="text" class="form-control" name="name" id="name" placeholder="Nombre">
                           </div>
                       </div>
                       <div class="col-md-12"> 
                           <div class="form-group">
+                            <label>Email</label>
                               <input type="email" class="form-control" name="email" id="email" placeholder="Email">
                           </div>
                       </div>
                       <div class="col-md-12">
-                          <div class="form-group">
 
-                              <select id="asunto" name="asunto" class="form-select" aria-label="Default select example">
+                          <div class="form-group">
+                            <label>Asunto</label>  
+                            <select id="asunto" name="asunto" class="form-select" aria-label="Default select example">
                                   <option selected>Asunto</option>
                                   <option value="1">Consulta</option>
                                   <option value="2">Reclamo</option>
@@ -219,6 +277,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
+                              <label>Mensaje</label>
                               <textarea name="mensaje" id="mensaje" class="form-control" id="message" cols="30" rows="4" placeholder="Escriba su mensaje"></textarea>
                           </div>
                       </div>
@@ -235,18 +294,18 @@
             </div>
           </div>
           
-
-          
           
 
-        </div>
+      </div>
 
         
     
         <footer></footer>
 
-        <script src="node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
-        <script src="node_modules\jquery\dist\jquery.min.js"></script>        
+        
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>        
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
         <script src="node_modules/leaflet/dist/leaflet.js"></script>
         <script src="js\include.js"></script>
         <script>
@@ -260,9 +319,8 @@
       var marker = L.marker([-38.714842, -72.646928]).addTo(map);
       var marker2 = L.marker([-38.736261, -72.590546]).addTo(map);
   
-      marker.bindPopup("<b>Hello world!</b><br>I am here.").openPopup();
-      marker2.bindPopup("<b>Temuco Centro</b>");
-  
+      marker.bindPopup("<b>Surcursal 1</b>").openPopup();
+      marker2.bindPopup("<b>Surcursal 2</b>");
       </script>
     </body>
 </html>

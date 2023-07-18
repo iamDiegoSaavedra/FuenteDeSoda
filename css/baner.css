@@ -1,6 +1,6 @@
 .page-ban {
     width: 100%;
-    padding:40px 0;
+    padding: 30px 0;
     text-align: center;
     background-image: url(img/banner-menu.jpg);
     /* Fijar la imagen de fondo este vertical y
@@ -11,6 +11,7 @@
     /* La imagen ocupa el 100% y se reescala */
     background-size: cover;
     color: white;
+    opacity: 1.5;
 }
 
 .page-ban h1{
@@ -21,4 +22,15 @@
     max-height: 230px;
     border-radius: 0;
     border: none;
+}
+
+.card-group{
+    margin-bottom: 1px;
+}
+
+.card{
+    display: flex;
+    height: 480px;
+    width: 360px;
+    border-radius: 0;
 }
