@@ -26,4 +26,12 @@ pass   : 1234
 
 ![login](https://github.com/iamDiegoSaavedra/FuenteDeSoda/blob/main/docs/ingresarlogin.png)
 
+## Herramientas usadas
+
+- nodejs v16.13 LTS
+- bootstrap 5.1
+- jquery 3.6
+- leaflet
+- font-awesome 4.7
+- google font
 
